@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="validation-form">
+        <form id="forma" method="post">
+            <label for="name">ФИО</label>
+            <input type="text" id="name" name="name" pattern="([А-ЯЁ][а-яё]+[\-\s]?){3,}" placeholder="Фамилия Имя Отчество" required>
+            <p id="name-validity"></p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@email.com" required>
+            <p id="email-validity"></p>
+            <label for="tel">Номер телефона</label>
+            <input type="tel" id="tel" name="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="+7(XXX)XXX-XX-XX" required>
+            <p id="tel-validity"></p>
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Пароль" id="password" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+            <p id="password-validity"></p>
+            <label for="password">Повторите пароль</label>
+            <input type="password" placeholder="Повторите пароль" id="confirm_password" required>
+            <p id="confirm-password-validity"></p>
+            <div class="buttons">
+                <input type="reset" value="Сбросить">
+                <input type="submit" value="Отправить">
+            </div>
+            <p id="result"></p>
+        </form>
+    </div>
+    
+</body>
+
+</html>
